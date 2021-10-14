@@ -62,14 +62,14 @@ function Template({
 
   const renderAddChild = () => {
     return (
-      <Row className="align-items-center p-1">
+      <Row className="align-items-center p-1 font">
         <Col md>
-          <Form.Group className="mb-1">
+          <Form.Group className="mb-3">
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="text"
               name="email"
-              placeholder="Enter the email will use to login"
+              placeholder="Email to login"
               onChange={(e) => handleChange(e)}
               required
             />
@@ -81,7 +81,7 @@ function Template({
             <Form.Control
               type="text"
               name="password"
-              placeholder="Enter the password will use to login"
+              placeholder="Password to login"
               onChange={(e) => handleChange(e)}
               required
             />
@@ -93,7 +93,7 @@ function Template({
             <Form.Control
               type="text"
               name="firstName"
-              placeholder="Type your child's Name"
+              placeholder="Child's Name"
               onChange={(e) => handleChange(e)}
               required
             />
@@ -105,7 +105,7 @@ function Template({
             <Form.Control
               type="text"
               name="lastName"
-              placeholder="Type your child's Last Name"
+              placeholder="Child's Last Name"
               onChange={(e) => handleChange(e)}
               required
             />
@@ -117,14 +117,14 @@ function Template({
             <Form.Control
               type="text"
               name="dni"
-              placeholder="Type your child's Dni"
+              placeholder="Child's Dni"
               onChange={(e) => handleChange(e)}
               required
             />
           </Form.Group>
         </Col>
         <Col md>
-          <Form.Group className="mb-3">
+          <Form.Group className="p-1 m-3 mb-1">
             <Button variant="primary" onClick={addChild}>
               Add
             </Button>
@@ -134,24 +134,31 @@ function Template({
     );
   };
   return (
-    <div className="bg1 font">
-      <Button variant="info" onClick={() => setShowAdd(!showAdd)}>
-        Add Child
-      </Button>
-      {showChilds ? (
-        <Button variant="info" onClick={() => setEnableEdit(!enableEdit)}>
-          Edit Data
+    <div className="bg1 align-items-center p-1">
+      <div className="p-1 m-3">
+        <Button variant="info" onClick={() => setShowAdd(!showAdd)}>
+          Add Child
         </Button>
-      ) : null}
-
+      </div>
       {showAdd ? renderAddChild() : null}
-      {showChilds ? (
-        myChilds.map((c: any) => {
-          return renderChild(c);
-        })
-      ) : (
-        <h6>You haven't loaded childs yet</h6>
-      )}
+      <div className="p-1 m-3 font">
+        {showChilds ? (
+          <Button variant="info" onClick={() => setEnableEdit(!enableEdit)}>
+            Edit Data
+          </Button>
+        ) : null}
+
+        <h6 className="m-2"> My childs data:</h6>
+      </div>
+      <div className="p-1 m-3">
+        {showChilds ? (
+          myChilds.map((c: any) => {
+            return renderChild(c);
+          })
+        ) : (
+          <h6>You haven't loaded childs yet</h6>
+        )}
+      </div>
       {enableEdit ? (
         <Button variant="success" onClick={submit}>
           Save Changes
