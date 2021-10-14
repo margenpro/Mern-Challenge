@@ -25,8 +25,7 @@ This will create a folder and download the project inside.
 Open another terminal inside the folder you just created and run:
 
 ```
-cd client
-npm install
+npm run install-client
 ```
 
 This will install the dependencies for the client side.
@@ -36,7 +35,6 @@ This will install the dependencies for the client side.
 Open another terminal inside the folder you just created and run:
 
 ```
-cd server
 npm install
 ```
 

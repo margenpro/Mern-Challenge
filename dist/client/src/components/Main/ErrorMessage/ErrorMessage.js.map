@@ -1,0 +1,1 @@
+{"version":3,"file":"ErrorMessage.js","sourceRoot":"","sources":["../../../../../../client/src/components/Main/ErrorMessage/ErrorMessage.tsx"],"names":[],"mappings":";;;;;AAAA,kDAA0B;AAE1B,SAAS,YAAY,CAAC,KAAU;IAC9B,OAAO,CACL,uCAAK,SAAS,EAAC,cAAc;QAC3B,4CAAO,KAAK,CAAC,OAAO,CAAQ;QAC5B,0CAAQ,OAAO,EAAE,KAAK,CAAC,UAAU,QAAY,CACzC,CACP,CAAC;AACJ,CAAC;AAED,kBAAe,YAAY,CAAC"}

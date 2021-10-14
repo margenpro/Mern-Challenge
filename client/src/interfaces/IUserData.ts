@@ -1,5 +1,5 @@
-import { IParent as IUser } from "../../../server/src/models/user.model";
-import { IChild } from "../../../server/src/models//child.model";
+import { IParent as IUser } from "../../../src/models/user.model";
+import { IChild } from "../../../src/models//child.model";
 
 export interface IUserData {
   token: string;
