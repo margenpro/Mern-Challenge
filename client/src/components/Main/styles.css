@@ -1,0 +1,11 @@
+@import url(../../assets/styles/colorsPalette.css);
+
+.bg1 {
+    background-color: var(--black);
+    height: 100vh;
+}
+
+.font {
+    font: 'Nunito';
+    color: azure;
+}
