@@ -20,29 +20,31 @@ git clone https://github.com/margenpro/Mern-Challenge.git
 
 This will create a folder and download the project inside.
 
-2) Install concurrently
+2) Install client dependencies
 
 Open another terminal inside the folder you just created and run:
 
 ```
-npm install -g concurrently
+cd client
+npm install
 ```
 
-This will be used to run server and client at the same time.
+This will install the dependencies for the client side.
 
-3) Install dependencies
+3) Install server dependencies
 
-In the terminal run:
+Open another terminal inside the folder you just created and run:
 
 ```
-npm run dps-install
+cd server
+npm install
 ```
 
-This will install all the dependencies for the client and the server as well.
+This will install the dependencies for the server as well.
 
 4) Run the project
 
-In the terminal run:
+In the current terminal run:
 
 ```
 npm run dev
