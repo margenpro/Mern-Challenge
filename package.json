@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "server": "tsc && node server/dist/app.js",
+    "client": "npm start --prefix /client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server-deps": "npm install /server",
+    "client-deps": "npm install /client",
+    "dps-install": "concurrently \"npm run server-deps\" \"npm run client-deps\""
+  }  
+}
