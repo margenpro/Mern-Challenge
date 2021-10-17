@@ -2,10 +2,17 @@
 
 .bg1 {
     background-color: var(--black);
-    height: 100vh;
 }
 
 .font {
     font: 'Nunito';
     color: azure;
+}
+
+.main {
+    background-color: var(--black);
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
 }

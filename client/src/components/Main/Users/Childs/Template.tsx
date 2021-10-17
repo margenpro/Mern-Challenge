@@ -135,22 +135,22 @@ function Template({
   };
   return (
     <div className="bg1 align-items-center p-1">
-      <div className="p-1 m-3">
+      <div className="p-1">
         <Button variant="info" onClick={() => setShowAdd(!showAdd)}>
           Add Child
         </Button>
       </div>
       {showAdd ? renderAddChild() : null}
-      <div className="p-1 m-3 font">
+      <div className="p-1 font">
         {showChilds ? (
           <Button variant="info" onClick={() => setEnableEdit(!enableEdit)}>
-            Edit Data
+            Edit Childs
           </Button>
         ) : null}
 
-        <h6 className="m-2"> My childs data:</h6>
+        <h6 className="p-1"> My childs data:</h6>
       </div>
-      <div className="p-1 m-3">
+      <div className="p-1">
         {showChilds ? (
           myChilds.map((c: any) => {
             return renderChild(c);

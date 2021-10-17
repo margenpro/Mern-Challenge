@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./styles.css";
 import Home from "./Home/Container";
 import Users from "./Users/Container";
 import Login from "./Users/Login/Login";
@@ -44,14 +45,16 @@ function Main(): JSX.Element {
     <BrowserRouter>
       <UserContext.Provider value={{ userData, setUserData }}>
         <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/users" component={Users} />
-          <Route exact path="/users/login" component={Login} />
-          <Route exact path="/users/register" component={Register} />
-          <Route exact path="/users/edit" component={Edit} />
-          <Route exact path="/users/childs" component={MyChilds} />
-        </Switch>
+        <div className="main">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/users" component={Users} />
+            <Route exact path="/users/login" component={Login} />
+            <Route exact path="/users/register" component={Register} />
+            <Route exact path="/users/edit" component={Edit} />
+            <Route exact path="/users/childs" component={MyChilds} />
+          </Switch>
+        </div>
       </UserContext.Provider>
     </BrowserRouter>
   );
